@@ -12,6 +12,7 @@
     height: 100vh;
 }
 
+
 .body_dark {
     color: #F3F3F3;
     background-color: #0C0D0D;
@@ -123,9 +124,19 @@
     color: inherit;
 }
 
+.form__input:focus {
+    border: 1px solid #2A75DB;
+    outline: none;
+}
+
 .form__input_dark {
     background: #585050;
     color: #F3F3F3;
+}
+
+.form__input_dark:focus {
+    border: 1px solid #B9D5FC;
+    outline: none;
 }
 
 .select {
