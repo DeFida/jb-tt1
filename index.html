@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test HH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+    <main class="main">
+        <div class="header">
+            <h1 class="header__heading">Preferences</h1>
+            <p class="header__text">On this page you can configure the main system parameters available for customization</p>
+        </div>
+        <form class="form" id="form">
+            <div class="form__wrapper">
+                <label for="companyTitle" class="form__label">Company Title</label>
+                <input type="text" name="companyTitle" id="companyTitle" placeholder="Default" class="form__input">
+            </div>
+
+            <div class="form__wrapper">
+                <label for="days" class="form__label">First day</label>
+                <div class="select">
+                    <div class="select__drpdwn" id="days" onclick="toggleSelect(this.id)">
+                        <input readonly type="text" class="select__selected" id="selected-option-days" value="Monday">
+                        <button class="select__arrow" id="select-arrow-days"></button>
+                    </div>
+                    
+                    <div class="select__options" id="options-days">
+                        <button type="button" id="Monday" name="option-days" class="select__option">Monday</button>
+                        <button type="button" id="Sunday" name="option-days" class="select__option">Sunday</button>
+                        <button type="button" id="System" name="option-days" class="select__option">System</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form__wrapper">
+                <label for="days" class="form__label">Container Width</label>
+                <div class="select">
+                    <div class="select__drpdwn" id="width" onclick="toggleSelect(this.id)">
+                        <input readonly type="text" class="select__selected" id="selected-option-width" value="Fixed">
+                        <button class="select__arrow" id="select-arrow-width"></button>
+                    </div>
+                    
+                    <div class="select__options" id="options-width">
+                        <button type="button" id="Fixed" name="option-width" class="select__option">Fixed</button>
+                        <button type="button" id="Not fixed" name="option-width" class="select__option">Not fixed</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form__wrapper">
+                <label for="days" class="form__label">Homepage</label>
+                <div class="select">
+                    <div class="select__drpdwn" id="homepage" onclick="toggleSelect(this.id)">
+                        <input readonly type="text" class="select__selected" id="selected-option-homepage" value="Starred Projects">
+                        <button class="select__arrow" id="select-arrow-homepage"></button>
+                    </div>
+                    
+                    <div class="select__options" id="options-homepage">
+                        <button type="button" id="Starred Projects" name="option-homepage" class="select__option">Starred Projects</button>
+                        <button type="button" id="About us" name="option-homepage" class="select__option">About us</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form__wrapper">
+                <label for="indentSize" class="form__label">Indent Size</label>
+                <input type="text" name="indentSize" id="indentSize" placeholder="Default" class="form__input">
+            </div>
+
+            <div class="form__wrapper">
+                <label for="personalcode" class="form__label">Personal code</label>
+                <div class="form__wrapper2">
+                    <div class="form__sminputs">
+                        <input type="text" class="form__input form__input_small" id="fpart"><span>-</span>
+                        <input type="text" class="form__input form__input_small" id="spart"><span>-</span>
+                        <input type="text" class="form__input form__input_small" id="tpart">
+                    </div>
+                    <p class="form__under">12 digits</p>
+                </div>
+            </div>
+
+            <div class="form__wrapper" style="align-items: flex-start;">
+                <p class="form__label">Theme</p>
+                <div class="form__wrapper3">
+                    <div class="form__radio-wrapper">
+                        <input type="radio" name="themes" value="Light" id="Light" class="form__radio">
+                        <label for="Light">Light</label>
+                    </div>
+                    <div class="form__radio-wrapper">
+                        <input type="radio" name="themes" id="Dark" value="Dark" class="form__radio">
+                        <label for="Dark">Dark</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form__buttons">
+                <button type="submit" class="form__submit">Apply and Save</button>
+                <button type="button" class="form__button">Cancel</button>
+            </div>
+        </form>
+
+        <img src="./images/under.svg" id="main-img" class="main__img" alt="">
+        <div class="main__txt-wr">
+            <p class="main__txt">2020-2022</p>
+            <p class="main__txt main__txt_blue">Terms of Service</p>
+            <p class="main__txt">and</p>
+            <p class="main__txt main__txt_blue">Conditions</p>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
